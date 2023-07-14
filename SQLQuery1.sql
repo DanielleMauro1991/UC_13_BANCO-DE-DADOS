@@ -63,7 +63,8 @@ select * from Escola
 select * from Professor
 select * from Escola_Professor
 
-DELETE FROM Escola WHERE IDEscola = 2
+DELETE FROM Escola_Professor WHERE Professor_ID = 1
+DELETE FROM Professor WHERE Professor_ID = 1
 
 CREATE TABLE Aleatoria
 (
