@@ -5,7 +5,7 @@ CREATE TABLE Escola
 (
 IDEscola INT PRIMARY KEY,
 Nome VARCHAR (100),
-Endereco VARCHAR (100)
+Descricao VARCHAR (100)
 );
 
 CREATE TABLE Professor
@@ -50,3 +50,29 @@ CREATE TABLE Aluno_Materia
 IDAluno INT foreign KEY references Aluno(IDAluno),
 IDMateria INT foreign KEY references Materia(IDMateria)
 );
+
+insert into Escola values (1,'SENAI','Escola de informatica');
+insert into Escola values (2,'CMEI Kids','Escola infantil');
+insert into Professor values (1,'Lucas Martins',111);
+insert into Professor values (2,'Renata Santos',113);
+insert into Escola_Professor values (1,1);
+insert into Escola_Professor values (1,2);
+
+
+select * from Escola
+select * from Professor
+select * from Escola_Professor
+
+DELETE FROM Escola WHERE IDEscola = 2
+
+CREATE TABLE Aleatoria
+(
+IDAleatoria INT PRIMARY KEY,
+Nome VARCHAR (100),
+RA VARCHAR (100)
+);
+
+drop table Aleatoria
+
+
+
